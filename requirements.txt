@@ -1,3 +1,4 @@
+#For Financial Data Agent
 phidata
 python-dotenv
 yfinance
@@ -6,3 +7,10 @@ duckduckgo-search
 fastapi
 uvicorn
 groq
+
+#For PDF Assistant Agent
+sqlalchemy
+pgvector
+psycopg[binary]
+pypdf
+huggingface-hub
