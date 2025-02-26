@@ -1,28 +1,11 @@
-Below is the updated README file with separate placeholders for the Financial Agent and PDF Agent diagrams, as well as the requested structure and spacing improvements:
-
----
-
+<a id="financial-agent-diagram"></a>
 # Agentic AI Project 🚀
 
 <!-- Financial Agent Architectural Diagram Placeholder -->
 ![Financial Agent Diagram](assets/FinancialAgentDiagram.png)
 
-The Agentic AI project is a multi-agent system that leverages the Groq language model alongside specialized tools to perform tasks such as financial data analysis, web searches, and PDF document assistance. The system integrates multiple APIs and libraries—including DuckDuckGo for web searches, yfinance for financial data, and Hugging Face for PDF embeddings—to provide comprehensive solutions.
+In Agentic AI Exploration, I designed 2 multi-agent systems that leverages the Groq language model alongside specialized tools to perform tasks such as financial data analysis, web searches, and PDF document assistance. The system integrates multiple APIs and libraries—including DuckDuckGo for web searches, yfinance for financial data, and Hugging Face for PDF embeddings—to provide comprehensive solutions.
 
----
-
-## Directory Structure
-
-```plaintext
-yash8745-agentic-ai/
-├── README.md
-├── financial_agent.py
-├── pdf_assistant.py
-├── requirements.txt
-└── test.py
-```
-
----
 
 ## Project Overview
 
@@ -47,17 +30,31 @@ yash8745-agentic-ai/
   - Storing the embedded data in a PostgreSQL vector database for interactive querying.
 
 ---
+## Directory Structure
+
+```
+Yash8745-Agentic-Ai/
+├── README.md
+├── financial_agent.py
+├── pdf_assistant.py
+├── requirements.txt
+└── test.py
+```
 
 ## Architecture Explanation
 
 ### Financial Agent Architecture
 
 The **Financial Agent** is designed to deliver comprehensive financial insights:
-- **Data Sources:** Integrates various tools to pull real-time financial data.
-- **Presentation:** Formats data into tables for clarity.
-- **Integration:** Works in tandem with the Web Agent to provide enriched responses.
+- **Tool Calling:** Integrates various tools to pull real-time financial data.
+- **Agent Orchestration:** 
+    1. Manages the agent's workflow and data retrieval.
+    2. The Orchestrator Agent coordinates the Web Agent and Financial Agent.
+    3. The Web Agent fetches data from DuckDuckGo and the Financial Agent retrieves financial data from YFinance.
 
-*(See the Financial Agent Diagram at the top of this document.)*
+
+[See the Financial Agent Diagram at the top of this document](#financial-agent-diagram)
+
 
 ### PDF Assistant Architecture
 
@@ -65,20 +62,16 @@ The **PDF Assistant Agent** focuses on document processing:
 - **Document Retrieval:** Loads PDF content from predefined URLs.
 - **Embedding:** Uses Hugging Face’s model to embed the document content.
 - **Storage & Querying:** Saves the embedded data in a PostgreSQL vector database for later retrieval and analysis.
-- **Workflow:** Initiates new sessions or continues from previous runs, ensuring continuity.
+
 
 <!-- PDF Agent Architectural Diagram Placeholder -->
 ![PDF Agent Diagram](assets/PdfAssistantDiagram.png)
-
-*(Refer to the diagram above for the PDF Agent's workflow and architecture.)*
-
----
 
 ## Setup and Installation
 
 ### Prerequisites
 
-- **Python:** Version 3.8 or higher.
+- **Python:** Version 3.10 or higher.
 - **PostgreSQL:** Required for the PDF Assistant. Ensure you have a running PostgreSQL instance with pgvector support.
 
 ### Installation Steps
