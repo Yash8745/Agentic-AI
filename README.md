@@ -5,7 +5,7 @@ Below is the updated README file with separate placeholders for the Financial Ag
 # Agentic AI Project 🚀
 
 <!-- Financial Agent Architectural Diagram Placeholder -->
-![Financial Agent Diagram](assets/image.png)
+![Financial Agent Diagram](assets/FinancialAgentDiagram.png)
 
 The Agentic AI project is a multi-agent system that leverages the Groq language model alongside specialized tools to perform tasks such as financial data analysis, web searches, and PDF document assistance. The system integrates multiple APIs and libraries—including DuckDuckGo for web searches, yfinance for financial data, and Hugging Face for PDF embeddings—to provide comprehensive solutions.
 
@@ -68,7 +68,7 @@ The **PDF Assistant Agent** focuses on document processing:
 - **Workflow:** Initiates new sessions or continues from previous runs, ensuring continuity.
 
 <!-- PDF Agent Architectural Diagram Placeholder -->
-![PDF Agent Diagram](path/to/pdf_agent_diagram.png)
+![PDF Agent Diagram](assets/PdfAssistantDiagram.png)
 
 *(Refer to the diagram above for the PDF Agent's workflow and architecture.)*
 
